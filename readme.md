@@ -2,8 +2,9 @@ What you need:
 1x ESP-WROOM32
 1x SN65HVD230
 
-ESP32CAN library from miwagner (THANKS!!!!!) https://github.com/miwagner/ESP32-Arduino-CAN
+ESP32CAN library from miwagner (THANKS!!!!!) ```https://github.com/miwagner/ESP32-Arduino-CAN```
 
+```
 Wiring:
 ESP32------SN65HVD230------CAR
 3v3--------3v3
@@ -12,6 +13,7 @@ CTX--------GPIO_5
 CRX--------GPIO_4
            CANH-----------HUB-CANH
            CANL-----------HUB-CANL
+```
 
 
 How to start:
@@ -71,4 +73,5 @@ void loop() {
       long int finalRpm = 0.25 * (256 * valueHex + valueHex1);
       Serial.println(finalRpm);
   }
-}```
+}
+```
