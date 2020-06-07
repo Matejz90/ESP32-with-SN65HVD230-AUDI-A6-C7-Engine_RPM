@@ -1,8 +1,10 @@
+#ESP32 with SN65HVD230 AUDI A6 C7 Engine_RPM  
+
 What you need:  
 1x ESP-WROOM32  
 1x SN65HVD230  
 
-ESP32CAN library from miwagner (THANKS!!!!!) ```https://github.com/miwagner/ESP32-Arduino-CAN```
+ESP32CAN library from miwagner (THANKS!!!!!) ```https://github.com/miwagner/ESP32-Arduino-CAN```  
 
 ```
 Wiring:
@@ -16,17 +18,17 @@ CRX--------GPIO_4
 ```
 
 
-How to start:
-Fist start esp32can_basic so you can read some data with what can you begin. I recommend that you delete lines from // Send CAN Message, because in my case intterupt data reading.
-Then build project and send to ESP32. Fire up serial monitor and wait some seconds. Then copy data to excel or notepad++ and find messages with most entrys.
-When you have sorted this, then try to figure whitch entry is for RPM. You can start searching with string "0x0C". For VAG group you need bit 2 and bit 3 (if you count from 0).
-You can calculate this hex with google and formule 0.25 * (256 * B + A) //if B = bit 3 and A = bit 2
+How to start:  
+Fist start esp32can_basic so you can read some data with what can you begin. I recommend that you delete lines from // Send CAN Message, because in my case intterupt data reading.  
+Then build project and send to ESP32. Fire up serial monitor and wait some seconds. Then copy data to excel or notepad++ and find messages with most entrys.  
+When you have sorted this, then try to figure whitch entry is for RPM. You can start searching with string "0x0C". For VAG group you need bit 2 and bit 3 (if you count from 0).  
+You can calculate this hex with google and formule 0.25 * (256 * B + A) //if B = bit 3 and A = bit 2  
 
-Mine was for idling car:
-11:18:38.612 -> New standard frame from 0x00000105, DLC 8, Data 0xC2 0x0A 0xEC 0x0C 0x83 0x53 0x00 0xFC 
-This adress throw 0.25 * (256 * 0x0C + 0xEC) = 827 RPM
+Mine was for idling car:  
+```11:18:38.612 -> New standard frame from 0x00000105, DLC 8, Data 0xC2 0x0A 0xEC 0x0C 0x83 0x53 0x00 0xFC ```  
+This adress throw 0.25 * (256 * 0x0C + 0xEC) = 827 RPM  
 
-Now code for calculating
+Now code for calculating  
 
 ```arduino
 #include <Arduino.h>
