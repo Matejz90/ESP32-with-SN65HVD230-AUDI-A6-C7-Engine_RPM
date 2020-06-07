@@ -21,20 +21,20 @@ CRX--------GPIO_4
 </p>
 
 ## How to start:  
-Fist start **esp32can_basic** so you can read some data with what can you begin. 
-I recommend that you delete lines from // Send CAN Message, because in my case intterupt data reading.  
+Fist start **esp32can_basic** so you can read some data with what you can begin.  
+I recommend that you delete lines from // Send CAN Message, because in my case was intteruping data reading.  
 
-Then build project and send to ESP32. Fire up serial monitor and wait some seconds. 
+Then build project and send to ESP32. Fire up serial monitor and wait some seconds.  
 Then copy data to excel or notepad++ and find messages with most entrys.  
 
-When you have sorted this, then try to figure whitch entry is for RPM. 
-You can start searching with string **"0x0C"**. For VAG group you need bit 2 and bit 3 (if you count from 0).  
+When you have sorted this, then try to figure whitch entry is for RPM.  
+You can start searching with string **"0x0C"**. For VAG group you need bit 2 and bit 3 (if you count from 0).   
 
 You can calculate this hex with google and formule **0.25 * (256 * B + A)** //if B = bit 3 and A = bit 2  
 
 Mine was for idling car:  
 ```11:18:38.612 -> New standard frame from 0x00000105, DLC 8, Data 0xC2 0x0A 0xEC 0x0C 0x83 0x53 0x00 0xFC ```  
-This adress throw **0.25 * (256 * 0x0C + 0xEC)** = 827 RPM
+This adress throw **0.25 * (256 * 0x0C + 0xEC)** = 827 RPM  
 <p align="center">
   <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/can_bus.png" width="480" height"640" title="hover text">
 </p>
@@ -94,3 +94,5 @@ I didn't insert delay or something but if you want to, you can. In my next code 
 <p align="center">
   <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/monitor.jpg" width="480" height"640" title="hover text">
 </p>
+
+**I'm not native English speaker and i don't use English every day, so sorry guys!**
