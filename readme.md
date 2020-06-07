@@ -16,7 +16,9 @@ CRX--------GPIO_4
            CANH-----------HUB-CANH
            CANL-----------HUB-CANL
 ```
-
+<p align="center">
+  <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/103272803_692276538009625_612867819972454835_n.jpg" width="480" height"640" title="hover text">
+</p>
 
 ## How to start:  
 Fist start **esp32can_basic** so you can read some data with what can you begin. 
@@ -32,7 +34,10 @@ You can calculate this hex with google and formule **0.25 * (256 * B + A)** //if
 
 Mine was for idling car:  
 ```11:18:38.612 -> New standard frame from 0x00000105, DLC 8, Data 0xC2 0x0A 0xEC 0x0C 0x83 0x53 0x00 0xFC ```  
-This adress throw **0.25 * (256 * 0x0C + 0xEC)** = 827 RPM  
+This adress throw **0.25 * (256 * 0x0C + 0xEC)** = 827 RPM
+<p align="center">
+  <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/can_bus.png" width="480" height"640" title="hover text">
+</p>
 
 ## Now code for calculating  
 
