@@ -27,10 +27,10 @@ I recommend that you delete lines from ```// Send CAN Message```, because in my 
 Then build project and send to ESP32. Fire up serial monitor and wait some seconds.  
 Then copy data to excel or notepad++ and find messages with most entrys.  
 
-When you have sorted this, then try to figure whitch entry is for RPM.  
+When you have sorted this, then try to figure which entry is for RPM.  
 You can start searching with string **"0x0C"**. For VAG group you need bit 2 and bit 3 (if you count from 0).   
 
-You can calculate this hex with google and formule **0.25 * (256 * B + A)** //if B = bit 3 and A = bit 2  
+You can calculate hex with google and formule **0.25 * (256 * B + A)** //if B = bit 3 and A = bit 2  
 
 Mine was for idling car:  
 ```11:18:38.612 -> New standard frame from 0x00000105, DLC 8, Data 0xC2 0x0A 0xEC 0x0C 0x83 0x53 0x00 0xFC ```  
@@ -90,6 +90,7 @@ void loop() {
 ```
 
 I didn't insert delay or something but if you want to, you can. In my next code i will insert timer because i don't want that my chip idle if i use delay(x) and also i don't want that above code cement CPU usage on 100%. [Something like this](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/)  
+//Edit: Stupid is this that code save data to char array and then calculate back to long int but i take one and only example which worked on my gear...  
 
 <p align="center">
   <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/monitor.jpg" width="480" height"640" title="hover text">
