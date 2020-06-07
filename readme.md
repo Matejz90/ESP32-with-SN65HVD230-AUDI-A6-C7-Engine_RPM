@@ -1,13 +1,15 @@
 # ESP32 with SN65HVD230 AUDI A6 C7 Engine_RPM  
 
-What you need:  
+ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM
+/ What you need:  
 1x ESP-WROOM32  
 1x SN65HVD230  
-
 ESP32CAN library from miwagner (THANKS!!!!!) ```https://github.com/miwagner/ESP32-Arduino-CAN```  
 
+ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM
+
+## Wiring
 ```
-Wiring:
 ESP32------SN65HVD230------CAR
 3v3--------3v3
 GND--------GND
@@ -18,7 +20,7 @@ CRX--------GPIO_4
 ```
 
 
-How to start:  
+## How to start:  
 Fist start esp32can_basic so you can read some data with what can you begin. I recommend that you delete lines from // Send CAN Message, because in my case intterupt data reading.  
 
 Then build project and send to ESP32. Fire up serial monitor and wait some seconds. Then copy data to excel or notepad++ and find messages with most entrys.  
@@ -31,7 +33,7 @@ Mine was for idling car:
 ```11:18:38.612 -> New standard frame from 0x00000105, DLC 8, Data 0xC2 0x0A 0xEC 0x0C 0x83 0x53 0x00 0xFC ```  
 This adress throw 0.25 * (256 * 0x0C + 0xEC) = 827 RPM  
 
-Now code for calculating  
+## Now code for calculating  
 
 ```arduino
 #include <Arduino.h>
