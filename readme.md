@@ -1,6 +1,6 @@
-What you need:
-1x ESP-WROOM32
-1x SN65HVD230
+What you need:  
+1x ESP-WROOM32  
+1x SN65HVD230  
 
 ESP32CAN library from miwagner (THANKS!!!!!) ```https://github.com/miwagner/ESP32-Arduino-CAN```
 
