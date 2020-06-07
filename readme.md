@@ -22,7 +22,7 @@ CRX--------GPIO_4
 
 ## How to start:  
 Fist start **esp32can_basic** so you can read some data with what you can begin.  
-I recommend that you delete lines from // Send CAN Message, because in my case was intteruping data reading.  
+I recommend that you delete lines from ```// Send CAN Message```, because in my case was intteruping data reading.  
 
 Then build project and send to ESP32. Fire up serial monitor and wait some seconds.  
 Then copy data to excel or notepad++ and find messages with most entrys.  
