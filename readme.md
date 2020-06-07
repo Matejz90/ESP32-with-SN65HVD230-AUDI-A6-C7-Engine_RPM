@@ -89,7 +89,7 @@ void loop() {
 }
 ```
 
-I didn't insert delay or something but if you want to, you can. In my next code i will insert timer because i don't want that my chip idle if i use delay(x) and also i don't want that above code cement CPU usage on 100%.[Something like this](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/)  
+I didn't insert delay or something but if you want to, you can. In my next code i will insert timer because i don't want that my chip idle if i use delay(x) and also i don't want that above code cement CPU usage on 100%. [Something like this](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/)  
 
 <p align="center">
   <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/monitor.jpg" width="480" height"640" title="hover text">
