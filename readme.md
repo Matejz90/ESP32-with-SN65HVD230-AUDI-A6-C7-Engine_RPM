@@ -91,7 +91,7 @@ void loop() {
 }
 ```
 
-If you want to you can add timer instead of delay if you want to slow down code. [Something like this](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/)  
+If you want to, you can add timer or delay if you need to slow down code. I preffer timer [Something like this](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/)  
   
 Reading and interpreting CAN-BUS data to RPM:  
 <p align="center">
