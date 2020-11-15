@@ -20,7 +20,9 @@ CRX--------GPIO_4
   <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/103272803_692276538009625_612867819972454835_n.jpg" width="480" height"640" title="hover text">
 </p>
 
-## How to start:  
+## How to start: 
+If you want work all from scratch start with ESP32CAN library. or jump straight to my edited code bellow.  
+  
 Start **esp32can_basic**. With this you will read data from BUS.
 I recommend that you delete lines from ```// Send CAN Message```, because in my case was intteruping data reading.  
 
@@ -39,7 +41,7 @@ This line throw out **0.25 * (256 * 0x0C + 0xEC)** = 827 RPM
   <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/can_bus.png" width="480" height"640" title="hover text">
 </p>
 
-## Now code for calculating  
+## My code for calculating and reading data  
 
 ```arduino
 #include <Arduino.h>
