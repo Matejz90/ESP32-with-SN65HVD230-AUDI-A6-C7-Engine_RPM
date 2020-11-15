@@ -89,8 +89,9 @@ void loop() {
 }
 ```
 
-I didn't insert delay or something but if you want to, you can for slow down code. In my working code i will insert timer instead of delay. [Something like this](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/)  
-
+If you want to you can add timer instead of delay if you want to slow down code. [Something like this](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/)  
+  
+Reading and interpreting CAN-BUS data to RPM:  
 <p align="center">
   <img src="https://github.com/Matejz90/ESP32-with-SN65HVD230-AUDI-A6-C7-Engine_RPM/blob/master/monitor.jpg" width="480" height"640" title="hover text">
 </p>
